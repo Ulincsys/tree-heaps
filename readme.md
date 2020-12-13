@@ -95,7 +95,7 @@ void buildHeap(Array arr, arraySize) {
 
 As you can see, our *buildHeap()* function calls *heapify()* `(arraySize / 2)` times, and runs backwards with respect to the order of the indices. This guarantees that we will visit each node which has children at least once, and that every subtree will satisfy the heap condition. Now, the second part of the algorithm is a recursive function *heapify()* which does the work of comparing the children to each other and the parent node, and re-ordering all of the children if needed.
 
-Do note that in C arrays are 0-indexed as opposed to 1-indexed. This is not particularly an issue for our algorithm, but it does require us to modify the definition of how we locate each node's children. Simple offset the results by 1 as shown below, and the definition should again be correct.
+Do note that in C arrays are 0-indexed as opposed to 1-indexed. This is not particularly an issue for our algorithm, but it does require us to modify the definition of how we locate each node's children. Simply offset the results by 1 as shown below, and the definition should again be correct.
 
 As you can see, for every time we call the *heapify()* subroutine, we ensure that the heap condition is satisfied in all of the subtrees by recursively calling *heapify()* if we manipulate either child.
 
